@@ -1,6 +1,6 @@
 # Vending_Machine
 Vending Machine FSM using Verilog
-Digital Design Project using Vivado Simulation June 2025
+
 – Designed and implemented a Finite State Machine (FSM) in Verilog to simulate a digital vending machine accepting
 Rs. 5 and Rs. 10 coins for three product options.
 – Developed synchronous state transition and output logic based on user inputs, with appropriate change return and
