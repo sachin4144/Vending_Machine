@@ -6,7 +6,7 @@
 // Create Date: 04.07.2025 12:07:38
 // Design Name: 
 // Module Name: VM_tb
-// Project Name: 
+// Project Name: Vending Machine
 // Target Devices: 
 // Tool Versions: 
 // Description: 
