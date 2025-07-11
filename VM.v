@@ -6,7 +6,7 @@
 // Create Date: 04.07.2025 10:50:40
 // Design Name: 
 // Module Name: VM
-// Project Name: 
+// Project Name: Vending Machine
 // Target Devices: 
 // Tool Versions: 
 // Description: 
@@ -104,7 +104,7 @@ module VM(
             pc     <= 0;
             change <= 0;
         end else begin
-            // Default values (avoid latches)
+            // Default values (avoiding latches)
             pa     <= 0;
             pb     <= 0;
             pc     <= 0;
