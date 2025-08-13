@@ -81,40 +81,40 @@ module VM_tb();
 
         #10 reset = 0; // Release reset
 
-        // ====== TEST 1: Insert Rs.5 → Buy Product A (₹5) ======
+        // TEST 1: Insert Rs.5 → Buy Product A (₹5)
         insert_coin(2'b01);  
         select_product(2'b00); 
         #20;
 
-        // ====== TEST 2: Insert Rs.10 → Buy Product A (₹5) ======
+        // TEST 2: Insert Rs.10 → Buy Product A (₹5)
         insert_coin(2'b10);  
         select_product(2'b00); // Expect ₹5 change
         #20;
 
-        // ====== TEST 3: Insert Rs.10 → Buy Product B (₹10) ======
+        // TEST 3: Insert Rs.10 → Buy Product B (₹10)
         insert_coin(2'b10);  
         select_product(2'b01); // Expect ₹0 change
         #20;
 
-        // ====== TEST 4: Insert Rs.15 → Buy Product B (₹10) ======
+        // TEST 4: Insert Rs.15 → Buy Product B (₹10)
         insert_coin(2'b10);  
         insert_coin(2'b01);  
         select_product(2'b01); // Expect ₹5 change
         #20;
 
-        // ====== TEST 5: Insert Rs.20 → Buy Product C (₹20) ======
+        // TEST 5: Insert Rs.20 → Buy Product C (₹20)
         insert_coin(2'b10);  
         insert_coin(2'b10);  
         select_product(2'b10); // Expect ₹0 change
         #20;
 
-        // ====== TEST 6: Cancel after Rs.15 inserted ======
+        // TEST 6: Cancel after Rs.15 inserted
         insert_coin(2'b10);  
         insert_coin(2'b01);  
         press_cancel();       // Expect ₹15 change
         #20;
 
-        // ====== TEST 7: Cancel after Rs.5 inserted ======
+        // TEST 7: Cancel after Rs.5 inserted
         insert_coin(2'b01);  
         press_cancel();       // Expect ₹5 change
         #20;
